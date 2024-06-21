@@ -80,23 +80,19 @@ const MapComponent = () => {
       style={{
         width: mapSize.width,
         height: mapSize.height,
-        overflow: "hidden",
-        margin: "auto",
-        position: "relative",
-        border: "solid",
-        borderColor: "rgba(128, 128, 128, 0.5)",
-        borderRadius: "10px",
       }}
+      className="overflow-hidden m-auto relative border border-gray-500/50 rounded-[10px]"
+
     >
       <div ref={mapContainer} className="map-container" />
-      <div className="sidebar">
+      <div className="absolute bottom-[3px] right-[43px] m-[12px] border border-gray-300 rounded bg-gray-50 text-black p-[6px] px-[12px] font-mono z-10">
         {lng},{lat}
       </div>
-      <div className="Container zoom-controls">
+      <div className="absolute bottom-3 right-3 border border-gray-300 rounded flex flex-col items-center">
         <button onClick={handleZoomIn} className="zoom-button">
           +
         </button>
-        <div className="zoom-border">{zoomPercentage.toFixed(0)}%</div>
+        <div className="border border-gray-300 bg-gray-50 flex items-center justify-center font-mono text-xs h-[25px] w-[31px]">{zoomPercentage.toFixed(0)}%</div>
         <button onClick={handleZoomOut} className="zoom-button">
           -
         </button>

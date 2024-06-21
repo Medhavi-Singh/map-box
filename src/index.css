@@ -43,7 +43,6 @@
   margin-right: 0px; 
 }
 .zoom-border{
-  /* border-style:groove none; */
   border-color: #cccccc;
   background-color: #f9fafae6;
   display: flex;
